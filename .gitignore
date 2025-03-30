@@ -1,6 +1,9 @@
 venv/
-__pycache__/
-*.pyc
 .env
-models/       # Exclude if you want to avoid pushing the model to GitHub
-data/         # Exclude data if it's sensitive (adjust based on your needs)
+*.pyc
+__pycache__/
+data/
+models/
+.DS_Store
+*.pkl
+*.csv
