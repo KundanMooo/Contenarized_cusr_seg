@@ -107,13 +107,13 @@ def cluster_data(pcadf, n_clusters=3):
     model = KMeans(n_clusters=n_clusters, random_state=42).fit(pcadf)
     return model.labels_
 
-def save_data(df, output_path="../data/clustered_data.csv"):
+def save_data(df, output_path="./data/clustered_data.csv"):
     """Save the processed DataFrame to a CSV file."""
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     df.to_csv(output_path, index=False)
 
 def datamain():
-    filepath = '../data/marketing_campaign.csv'
+    filepath = './data/marketing_campaign.csv'
     df = load_data(filepath)
     df = preprocess_data(df)
 

@@ -4,7 +4,7 @@ import numpy as np
 
 # Function to load the saved model
 @st.cache_resource
-def load_model(filename='../models/best_logistic_regression_model.pkl'):
+def load_model(filename='models/best_logistic_regression_model.pkl'):
     try:
         with open(filename, 'rb') as model_file:
             return pickle.load(model_file)

@@ -12,7 +12,7 @@ def modelmain():
     datamain()
 
     # Load the clustered data
-    df = pd.read_csv('../data/clustered_data.csv')
+    df = pd.read_csv('./data/clustered_data.csv')
 
     # Split the data into training and test sets
     X = df.drop(columns=['cluster'])
@@ -35,8 +35,8 @@ def modelmain():
     print("Accuracy:", accuracy_score(y_test, y_pred))
 
     # Save the model
-    os.makedirs("../models", exist_ok=True)
-    with open("../models/best_logistic_regression_model.pkl", "wb") as f:
+    os.makedirs("models/", exist_ok=True)
+    with open("models/best_logistic_regression_model.pkl", "wb") as f:
         pickle.dump(model.best_estimator_, f)
     print("Model saved!")
 
