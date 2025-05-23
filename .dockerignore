@@ -1,5 +1,10 @@
 __pycache__/
 *.pyc
 *.pyo
-venv/
+*.pyd
 .env
+*.git
+.gitignore
+data/
+uploaded.csv
+model.pkl
